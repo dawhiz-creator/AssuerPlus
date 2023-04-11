@@ -58,7 +58,7 @@ function getControleur($nomControleur) {
 //prend en paramètre le nom de la méthode du contrôleur à appeler pour récupérer le titre et le contenu de la page
 //appelez la méthode correspondante du contrôleur pour récupérer le titre et le contenu de la page.
 //afficherVue en passant en paramètre les variables title et content qui ont été récupérées dans la méthode du contrôleur
-function afficherPage($controleur, $methode) {
+function afficher($controleur, $methode) {
         $resultat = $controleur->$methode();
         if (is_array($resultat) && isset($resultat['title']) && isset($resultat['content'])) {
             $title = $resultat['title'];
