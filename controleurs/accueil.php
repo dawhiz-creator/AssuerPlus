@@ -30,11 +30,11 @@ $content = '
             <a class="btn btn-primary btn-promote" href="index.php?page=contact" onclick="javascript:tc_events_global(this,\'click\', {\'evt_click_name\': \'obtenir-assistance\'});">Une situation d’urgence, une panne&nbsp;?<span><strong>Obtenir de l’assistance</strong></span></a>
           </div>
 
-<div class="col-md-6 mb-3">
-        <a class="btn btn-primary btn-promote" href="index.php?page=connexion"
-            onclick="javascript:tc_events_global(this,\'click\', {\'evt_click_name\': \'declaration\'});">Un accident,
+          <div class="col-md-6 mb-3">
+            <a class="btn btn-primary btn-promote" href="index.php?page=declaration"
+              onclick="javascript:tc_events_global(this,\'click\', {\'evt_click_name\': \'declaration\'});">Un accident,
             un problème&nbsp;?<span><strong>Déclarer un sinistre</strong></span></a>
-        </div>
+          </div>
 
           <div class="col-md-6 mb-3">
             <a class="btn btn-primary btn-promote" href="index.php?page=connexion" onclick="javascript:tc_events_global(this,\'click\', {\'evt_click_name\': \'suivre-un-sinistre\'});" tabindex="-1">Une question, un document à envoyer&nbsp;?<span><strong>Suivre un sinistre</strong></span></a>

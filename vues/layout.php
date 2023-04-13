@@ -12,20 +12,31 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.php?page=accueil"> <img src="vues/logo.jpg" width="30" height="30"
-                    class="d-inline-block align-top" alt="">AssuerPlus</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto">
+            <a class="navbar-brand" href="index.php?page=accueil">
+                <div class="d-flex align-items-center">
+                    <img src="vues/logo.jpg" class="d-inline-block align-top mr-2"
+                        <?php if (preg_match('/xs|sm/', $_SERVER['HTTP_USER_AGENT'])): ?> width="30" height="30"
+                        <?php else: ?> width="28" height="45" <?php endif; ?> alt="">
+                    <div>
+                        <span class="d-none d-md-block">AssuerPlus</span>
+                        <span class="d-md-none">AssuerPlus<br>l'assureur français</span>
+                    </div>
+                </div>
+            </a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+
+            <div class="collapse navbar-collapse row" id="navbarNav">
+                <ul class="navbar-nav col-md-10 justify-content-center text-center">
                     <li class="nav-item <?= ($page === 'accueil') ? 'active' : '' ?>">
                         <a class="nav-link" href="index.php?page=accueil">Accueil</a>
                     </li>
                     <li class="nav-item <?= ($page === 'about') ? 'active' : '' ?>">
-                        <a class="nav-link" href="index.php?page=about">About_us</a>
+                        <a class="nav-link" href="index.php?page=about">About us</a>
                     </li>
                     <li class="nav-item <?= ($page === 'services') ? 'active' : '' ?>">
                         <a class="nav-link" href="index.php?page=services">Services</a>
@@ -34,18 +45,17 @@
                         <a class="nav-link" href="index.php?page=FAQ">FAQ</a>
                     </li>
                     <li class="nav-item <?= ($page === 'devis') ? 'active' : '' ?>">
-                        <a class="nav-link" href="index.php?page=devis">devis</a>
+                        <a class="nav-link" href="index.php?page=devis">Devis</a>
                     </li>
                     <li class="nav-item <?= ($page === 'contact') ? 'active' : '' ?>">
                         <a class="nav-link" href="index.php?page=contact">Contact</a>
                     </li>
                 </ul>
-                <?php 
-        //session_start(); // Démarrer la session pour vérifier si l'utilisateur est connecté
-             if (!isset($_SESSION['utilisateur'])) { ?>
-                <button class="btn btn-outline-primary ml-auto">
+
+                <?php if (!isset($_SESSION['utilisateur'])): ?>
+                <button class="btn btn-outline-primary  text-md-right mt-3 mt-md-0 mx-auto btn-sm">
                     <a href="index.php?page=connexion">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" fill="currentColor"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="17" fill="currentColor"
                             class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                             <path fill-rule="evenodd"
@@ -54,11 +64,13 @@
                         Espace Personnel
                     </a>
                 </button>
-                <?php } ?>
-
+                <?php endif; ?>
             </div>
         </nav>
     </header>
+
+
+
 
     <main role="main" class="container">
 

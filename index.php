@@ -1,7 +1,7 @@
 <?php
 
 //require_once 'config/config.php';
-require_once 'helpers.php';
+require_once 'models/helpers.php';
 require_once 'controleurs/Controleur.php';
 require_once 'models/Client.php';
 require_once 'models/Contrat.php';
@@ -14,4 +14,4 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'accueil';
 $controleur = getControleur($page);
 
 // Affichage de la page
-afficherPage($controleur, 'afficherPageAccueil');
+afficher($controleur, 'afficherPage');
