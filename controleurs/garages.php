@@ -23,11 +23,11 @@ $content = '
                     <div class="row mt-5">
             <div class="col-md-8 mx-auto text-center">
 
-                <p>Vous pouvez saisir une adresse complète ou partielle dans le champ de saisie, puis cliquer sur le
+                <p>Saisissez une adresse complète ou partielle dans le champ de saisie, puis cliquer sur le
                     bouton "Rechercher". Les résultats s\'afficheront dans la zone de résultats ci-dessous.</p>
             </div>
         </div>
-        
+        <div class="form-group">
                 <label for="address">Adresse</label>
                 <div class="input-group">
                     <input type="text" class="form-control" id="address" placeholder="Entrez une adresse...">
@@ -35,6 +35,8 @@ $content = '
                         <button type="button" id="search" class="btn btn-primary">Rechercher</button>
                     </div>
                 </div>
+                  <small id="results-help" class="form-text text-muted">Cliquez sur un résultat pour accéder à la page Google Maps correspondante</small>
+
             </div>
             <div class="card">
                 <div class="card-body">
@@ -70,20 +72,24 @@ $content = '
     }
 
     function fillResults(data) {
-        let list = document.getElementById(\'results\')
-        list.innerHTML = \'\'
+        let list = document.getElementById(\'results\');
+        list.innerHTML = \'\';
         if (undefined !== data.features) {
             data.features.forEach(function (element) {
-                let li = document.createElement(\'li\')
-                li.className = "list-group-item"
-                li.appendChild(document.createTextNode(element.properties.label))
-                list.appendChild(li)
+                let li = document.createElement(\'li\');
+                li.classList.add(\'list-group-item\');
+                let link = document.createElement(\'a\');
+                link.setAttribute(\'href\', \'https://www.google.com/maps/place/\' + encodeURIComponent(element.properties.label));
+                link.setAttribute(\'target\', \'_blank\');
+                link.appendChild(document.createTextNode(element.properties.label));
+                li.appendChild(link);
+                list.appendChild(li);
             });
         } else {
-            let li = document.createElement(\'li\')
-            li.className = "list-group-item"
-            li.appendChild(document.createTextNode("Aucun résultat trouvé."))
-            list.appendChild(li)
+            let li = document.createElement(\'li\');
+            li.classList.add(\'list-group-item\');
+            li.appendChild(document.createTextNode(\'Aucun résultat trouvé.\'));
+            list.appendChild(li);
         }
     }
 
