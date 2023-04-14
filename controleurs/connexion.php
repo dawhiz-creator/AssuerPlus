@@ -40,14 +40,14 @@ $content = '
                     <div class="invalid-feedback" onclick="this.parentNode.querySelector(\'input\').focus()">Entrez un mot de passe valide (format : dawhiz@live.fr)</div>
                 </div>
 
-            <button type="submit" class="btn btn-primary">Se connecter</button>
+            <button type="submit" class="btn btn-primary my-4">Se connecter</button>
           </form>
             <p class="mt-3">Vous n\'avez pas encore de compte ? <a href="index.php?page=newaccount">Créer un compte</a></p>
         </div>
       </div>
 
-      <div class="mt-3 text-center">
-        <small>Notre site s\'engage à respecter les règles RGPD en vigueur.Nous nous engageons à ne pas communiquer vos données à des tiers sans votre consentement</small>
+      <div class="mt-3 text-center bg-light">
+        <small><strong>*</strong>Notre site s\'engage à respecter les règles RGPD en vigueur.Nous nous engageons à ne pas communiquer vos données à des tiers sans votre consentement</small>
       </div>
 
     </div>
