@@ -15,9 +15,10 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto">
             <a class="navbar-brand" href="index.php?page=accueil">
                 <div class="d-flex align-items-center">
-                    <img src="vues/logo.jpg" class="d-inline-block align-top mr-2"
-                        <?php if (preg_match('/xs|sm/', $_SERVER['HTTP_USER_AGENT'])): ?> width="30" height="30"
-                        <?php else: ?> width="28" height="45" <?php endif; ?> alt="">
+                    <img src="vues/logo.jpg" width="30" height="30" class="d-none d-md-inline-block align-top mr-2"
+                        alt="">
+                    <img src="vues/logo.jpg" width="28" height="45" class="d-inline-block d-md-none align-top mr-2"
+                        alt="">
                     <div>
                         <span class="d-none d-md-block">AssuerPlus</span>
                         <span class="d-md-none">AssuerPlus<br>l'assureur français</span>
@@ -78,8 +79,8 @@
 
     </main>
 
-    <footer class="bg-light">
-        <div class="container py-3 text-center">
+    <footer class="row">
+        <div class="container py-3 text-center fixed-bottom bg-light col-md-12">
             <p class="m-0">AssuerPlus : l'assurance auto depuis 20 ans, partout en France
             </p>
             <p class="m-0">&copy; 2023 AssuerPlus - Tous droits réservés</p>
