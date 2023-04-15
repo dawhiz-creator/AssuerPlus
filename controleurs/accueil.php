@@ -18,10 +18,10 @@ $content = '
     <div class="container content col-md-12 col-lg-8 mx-auto">
 
       <div class="section-heading">
-        <h1 class="heading col-md-12 text-center "><span class="highlight ">Assistance</span> et <span class="highlight ">sinistre</span></h1>
-        <div class="heading col-md-12 text-center">Comment pouvons-nous vous aider ?</div>
+        <h1 class="heading col-md-12 text-center mt-3"><span class="highlight ">Assistance</span> et <span class="highlight ">sinistre</span></h1>
+        <div class="heading col-md-12 text-center mt-3">Comment pouvons-nous vous aider ?</div>
       </div>
-<section class="mod-section-entete">
+<section class="mod-section-entete mt-3">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-8 mx-auto">
@@ -51,8 +51,8 @@ $content = '
     </div>
 
 <div class="container">
-  <h3 class="col-md-12 text-center">Nos  Agences</h3>
-  <div class="row text-center">
+  <h3 class="col-md-12 text-center mt-3">Nos  Agences</h3>
+  <div class="row text-center mt-3">
     <div class="col-md-3">
       <ul class="list-unstyled">
         <li><a href="/paris-C75056" title="Paris">Paris</a></li>
