@@ -104,9 +104,8 @@
     </main>
 
     <footer class="row">
-        <div class="container py-3 text-center  bg-light col-md-12">
-            <p class="m-0">AssuerPlus : l'assurance auto depuis 20 ans, partout en France
-            </p>
+        <div class="container-fluid py-3 text-center bg-light">
+            <p class="m-0">AssuerPlus : l'assurance auto depuis 20 ans, partout en France</p>
             <p class="m-0">&copy; 2023 AssuerPlus - Tous droits réservés</p>
         </div>
     </footer>

@@ -31,3 +31,17 @@ margin-top: 210px;
 
 
 
+
+.row.text-center {
+background-color: lightsteelblue;
+border: none;
+border-radius: 10px;
+border-image: linear-gradient(to right, gray, transparent) 1 100%;
+}
+
+.col-md-4 {
+margin-top: 210px;
+}
+
+
+
