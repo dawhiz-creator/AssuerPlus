@@ -70,6 +70,30 @@
         </nav>
     </header>
 
+    <?php $page = isset($_GET['page']) ? $_GET['page'] : 'accueil'; ?>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Accueil</a></li>
+            <?php if ($page === 'about'): ?>
+            <li class="breadcrumb-item active" aria-current="page">À propos</li>
+            <?php elseif ($page === 'services'): ?>
+            <li class="breadcrumb-item active" aria-current="page">Services</li>
+            <?php elseif ($page === 'FAQ'): ?>
+            <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+            <?php elseif ($page === 'devis'): ?>
+            <li class="breadcrumb-item active" aria-current="page">Devis</li>
+            <?php elseif ($page === 'contact'): ?>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            <?php elseif ($page === 'connexion'): ?>
+            <li class="breadcrumb-item active" aria-current="page">Connexion</li>
+            <?php elseif ($page === 'newaccount'): ?>
+            <li class="breadcrumb-item active" aria-current="page">Inscription</li>
+            <?php endif; ?>
+        </ol>
+    </nav>
+
+
+
 
 
 
@@ -80,12 +104,13 @@
     </main>
 
     <footer class="row">
-        <div class="container py-3 text-center fixed-bottom bg-light col-md-12">
+        <div class="container py-3 text-center  bg-light col-md-12">
             <p class="m-0">AssuerPlus : l'assurance auto depuis 20 ans, partout en France
             </p>
             <p class="m-0">&copy; 2023 AssuerPlus - Tous droits réservés</p>
         </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
