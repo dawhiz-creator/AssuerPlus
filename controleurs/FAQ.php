@@ -1,5 +1,3 @@
-
-
 <?php
 
 require_once 'Controleur.php';
@@ -94,6 +92,47 @@ $content = '
     Le choix de la couverture d\'assurance automobile dépend de vos besoins et de votre budget. Il est important de considérer plusieurs facteurs tels que le modèle de votre voiture, la fréquence d\'utilisation, le lieu de résidence et les risques associés, ainsi que le niveau de couverture souhaité. Nous vous recommandons de contacter notre service clientèle pour discuter de vos besoins spécifiques et recevoir une évaluation personnalisée de votre assurance automobile.
   </div>
 </div>
+
+
+<div class="card-header" id="headingFive">
+  <h5 class="mb-0">
+    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+      Quels sont les avantages de souscrire une assurance tous risques ?
+    </button>
+  </h5>
+</div>
+<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionFAQ">
+  <div class="card-body">
+    L\'assurance tous risques est la couverture la plus complète que vous pouvez obtenir pour votre véhicule. Elle couvre non seulement les dommages causés à des tiers, mais également ceux causés à votre propre véhicule, même si vous êtes responsable de l\'accident. Elle peut également inclure des garanties optionnelles telles que le bris de glace ou la garantie du conducteur. Souscrire une assurance tous risques vous donne donc une tranquillité d\'esprit supplémentaire en sachant que vous êtes entièrement protégé en cas de dommages.
+  </div>
+</div>
+
+  <div class="card-header" id="headingSix">
+  <h5 class="mb-0">
+    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+      Quels sont les critères pour établir le tarif d\'une assurance automobile ?
+    </button>
+  </h5>
+</div>
+<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionFAQ">
+  <div class="card-body">
+    Le tarif d\'une assurance automobile est établi en fonction de plusieurs critères tels que l\'âge et le sexe du conducteur, son historique de conduite, le type de véhicule, sa puissance fiscale, l\'usage qui en est fait, la zone géographique, etc. Les assureurs utilisent ces critères pour évaluer le risque représenté par chaque conducteur et établir un tarif personnalisé en conséquence.
+  </div>
+</div>
+
+  <div class="card-header" id="headingSeven">
+  <h5 class="mb-0">
+    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+      Est-il possible de modifier sa couverture d\'assurance en cours de contrat ?
+    </button>
+  </h5>
+</div>
+<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionFAQ">
+  <div class="card-body">
+    Oui, il est généralement possible de modifier sa couverture d\'assurance en cours de contrat. Si vous souhaitez ajouter ou supprimer des garanties, ou changer le niveau de couverture, vous devez contacter votre assureur pour lui faire part de vos souhaits. Dans certains cas, des frais peuvent s\'appliquer pour les modifications apportées au contrat en cours de validité.
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -102,4 +141,3 @@ $content = '
 ';
 include("vues/layout.php");
 ?>
-
